@@ -1,0 +1,9 @@
+<% if (errors) { %>
+        <% Object.keys(errors).forEach((attribute) => { %>
+            <% Object.values(errors[attribute]).forEach((err) => { %>
+                <%- include("./partials/alert/alert.ejs"); %>
+                    <%= err %>
+                </div>
+            <% }); %>
+        <% }); %>
+ <% } %>

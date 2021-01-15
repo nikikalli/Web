@@ -1,0 +1,29 @@
+
+<div class="rep-form-m">
+
+<form method="POST" action="/behavior/reporting">
+    <fieldset>
+        <label for="dateField">Date</label>
+            <input type="date" name="date" id='dateField' value="<%=today%>" />
+        <label for="sleepField">Sleep duration in hours</label>
+            <input type="text" min="0" name="sleep" id='sleepField' placeholder="I've slept for..." value="<%if(t) {%> <%=t%><%}%>"/>
+        <label for="qualityField">Sleep quality on a scale 1-5</label>
+        <select class="sleep-quality" name="sleepq" id="qualityField">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        <label for="moodField">Generic mood on a scale 1-5</label>
+        <select class="generic-mood" name="moodq" id="moodField">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>      
+            <input type="submit" value="Submit" />
+    </fieldset>
+</form>
+</div>

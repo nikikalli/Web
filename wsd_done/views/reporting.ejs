@@ -1,0 +1,58 @@
+<%- include("./partials/headers/header.ejs") %> 
+<%- include("./partials/headers/headerLogout.ejs") %>  
+                <li><% if(email) { %> <a>Logged as <%=email%> </a><% } %> </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="morning-evening-reports">
+    <% if(state === 1) { %>
+        <div class="morning">
+            <%- include("./partials/alert/alert.ejs"); %>
+                Today's morning data has already been submitted.
+              </div>
+        </div>
+    <% }; %>
+
+    <% if(state === 2) { %>
+        <div class="evening">
+            <%- include("./partials/alert/alert.ejs"); %>
+            Today's evening data has already been submitted.
+            </div>
+        </div>
+    <% }; %>
+
+    <% if(state === 3) { %>
+        <div class="morning-n-evening">
+            <%- include("./partials/alert/alert.ejs"); %>
+                Today's morning and evening data has already been submitted.
+              </div>
+        </div>
+    <% }; %>
+</div>
+
+<%- include("./error.ejs") %>
+
+<div class="buttonit">
+    <div class="smh-button1">
+        <button type="button" class="collapsible"> Morning </button>
+        <div class="reporting-post">
+            <%- include("./partials/reports/morning.ejs") %>
+        </div>
+    </div>
+    <div class="smh-button2">
+        <button type="button" class="collapsible"> Evening </button>
+        <div class="reporting-post">
+            <%- include("./partials/reports/evening.ejs") %>
+        </div>
+    </div>
+</div>
+
+    <%- include('./partials/scripts/script.ejs') %>
+
+
+
+
+<div class="container">
+<%- include('./partials/footers/footer.ejs') %>

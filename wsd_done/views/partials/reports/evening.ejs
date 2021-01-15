@@ -1,0 +1,29 @@
+<div class="rep-form-e">
+    <form method="POST" action="/behavior/reporting">
+        <fieldset>
+            <label for="dateField">Date</label>
+                <input type="date" name="date" id='dateField' value="<%=today%>" />
+            <label for="sportField">Hours spent on sports</label>
+        <input type="text" min="0" name="sport" id='sportField' placeholder="I've exercised for..." value="<%if(tt) {%> <%=tt%> <%}%>"/>
+            <label for="studyField">Hours spent on studying</label>
+                <input type="text" min="0" name="study" id='studyField' placeholder="I've studied for..." value="<%if(ttt) {%> <%=ttt%> <%}%>"/>
+            <label for="qualityEatingField">Quality of eating on a scale 1-5</label>
+            <select class="eat-quality" name='eat' id="qualityEatingField">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            <label for="moodField">Generic mood on a scale 1-5</label>
+            <select class="generic-mood" name='generic-mood' id="moodField">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>      
+                <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+    </div>

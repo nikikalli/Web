@@ -1,0 +1,31 @@
+<%- include("./partials/headers/header.ejs") %>
+<%- include("./partials/headers/headerRegLog.ejs") %>  
+            </ul>
+        </nav>
+    </div>
+</header>
+<%- include("./error.ejs") %>
+<%- include("./partials/eyes/eyes.ejs") %>
+
+
+
+<div class="container">
+
+    <h1>Login</h1>
+
+    <div class="login-field">
+        <form method="POST" action="/auth/login">
+            <fieldset>
+                <label for="emailField">Email</label>
+                    <input type="email" name="email" id='emailField' placeholder="Type your email here..." />
+                <label for="passwordField">Password</label>
+                    <input type="password" name="password" id='passwordField' placeholder="Type your password here..."/>
+                    <input type="submit" value="Login" />
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include('./partials/footers/footer.ejs') %>

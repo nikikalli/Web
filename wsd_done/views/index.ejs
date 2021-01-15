@@ -1,0 +1,22 @@
+<%- include('./partials/headers/header.ejs') %>
+<%- include("./partials/headers/headerRegLog.ejs") %>  
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+<div class="parent">
+    <div class="card">
+        <i style="font-size:250px" class="far"><%if(mood2 > mood1) {%> &#xf119; <% } else if( mood1 > mood2)  { %> &#xf118; <% } else { %> &#xf11a; <% }; %>  </i>
+        <div class="containr">
+            <p><%=output %> Today's avg: <%=mood1.toFixed(2); %> / Yesterday's avg: <%=mood2.toFixed(2); %></p>
+        </div>
+    </div>
+</div>
+
+  
+
+<%- include('./partials/footers/footerInfo.ejs') %>

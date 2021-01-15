@@ -1,0 +1,127 @@
+<%- include("./partials/headers/header.ejs") %>
+<%- include("./partials/headers/headerLogout.ejs") %>
+            <li><% if(email) { %> <a>Logged as <%=email%> </a><% } %> </li>   
+        </ul>
+    </nav>
+</div>
+</header>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 2</div>
+        <div class="table-one">
+            <table class="ur-w-data">
+                <%if(week.sleep_dur == 0){%>
+                    <caption>You have no data for <%=weekNum %></caption>
+                    <%}else{%>
+                <caption>This is your summary for <%=weekNum %></caption>
+                <thead> 
+                    <tr>
+                        <th id="thDay">Sleep duration</th>
+                        <th id="thRegular">Sports and exercise duration</th>
+                        <th id="thOvertime">Time spent studying</th>
+                        <th id="thTotal">Quality of sleep</th>
+                        <th id="thMood">General mood</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="week-data">
+                        <td><%=week.sleep_dur.toFixed(2);  %></td>
+                        <td> <%=week.sports.toFixed(2);  %></td>
+                        <td><%=week.studying.toFixed(2);  %></td>
+                        <td> <%=week.sleep_quality.toFixed(2); %></td>
+                        <td><%=week.mood.toFixed(2); %></td>
+                    </tr>
+                </tbody>
+                <%}%>
+            </table>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 2</div>
+        <div class="table-two">
+            <table class="ur-w-data">
+                <%if(month.sleep_dur == 0){%>
+                <caption>You have no data for <%=monthNum %></caption>
+                <%}else{%>
+                <caption>This is your summary for <%=monthNum %></caption>
+                <thead> 
+                    <tr>
+                        <th id="thSleep">Sleep duration</th>
+                        <th id="thSport">Sports and exercise duration</th>
+                        <th id="thStudy">Time spent studying</th>
+                        <th id="thQuality">Quality of sleep</th>
+                        <th id="thMood">General mood</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%=month.sleep_dur.toFixed(2);  %></td>
+                        <td> <%=month.sports.toFixed(2);  %></td>
+                        <td><%=month.studying.toFixed(2);  %></td>
+                        <td> <%=month.sleep_quality.toFixed(2); %></td>
+                        <td><%=month.mood.toFixed(2); %></td>
+                    </tr>
+                </tbody>
+                <%}%>
+            </table>
+        </div>
+    </div>
+
+    <div class="arrows">
+        <div class="absolute"></div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+</div>
+
+
+<%- include('./partials/scripts/slidesScript.ejs') %>
+
+<div class="balls">
+    <div style="text-align:center">
+        <div class="absolute">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+</div>
+
+    <div class="smh">
+        <div class="relative">
+            <li>
+                <button type="button" class="collapsible"> Change week </button>
+                    <div class="summary-post">
+                        <form method="POST" action="/behavior/summary">
+                            <label for="week">Select a week:</label>
+                            <input type="week" id="week" name="week">
+                            <input type="submit">
+                        </form>
+                    </div>
+            </li>
+            <li>
+                <button type="button" class="collapsible"> Change month </button>
+                    <div class="summary-post">
+
+                        <form method="POST" action="/behavior/summary">
+                            <label for="month">Select a month:</label>
+                            <input type="month" id="month" name="month">
+                            <input type="submit">
+                        </form>
+                    </div>
+            </li>
+        </div>
+    </div>
+    <style>
+        .summary-post {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+        }
+    </style>
+
+<%- include('./partials/scripts/script.ejs') %>
+<%- include('./partials/footers/footer.ejs') %>
