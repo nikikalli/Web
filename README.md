@@ -3,7 +3,7 @@
                                                               
                                     Wed softwer development project
                                                               
-======================================================================================================
+=============================================================================================
 
    ![web](https://user-images.githubusercontent.com/64903981/149135888-cb4b52a6-6be5-4ae1-889a-50b23831e75c.png)
 
@@ -12,21 +12,17 @@
    (Open the link for instraction on how to install deno)
 
 
-=======================================================================================================
-
-
-
 
 
 
                                       Access and CREATE TABLEs
-=======================================================================================================
+=============================================================================================
 
-                      CREATE TABLEs can be found in root folder of the application.                               
+CREATE TABLEs can be found in root folder of the application.                               
 
-                      The address at which the application can currently be accessed: 
+The address at which the application can currently be accessed: 
                                                       
-                               ******CAUTION*******   ---> Not optomized
+******CAUTION*******   ---> Not optomized
 
                                                       
                                                       
@@ -36,12 +32,12 @@
 
 
                                   Guide on how to run the application
-=======================================================================================================
+==============================================================================================
 
 
 
                                         Running from .env file
--------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 
  Env file is used for running the application locally. You can find the .env file in the root folder 
@@ -53,10 +49,10 @@
 
 
                                           How to run tests
-=======================================================================================================
+==============================================================================================
 
  To run tests you have to set TEST_ENVIRONMENT to something, for example to true. 
 
-                        -------------------------------------------------------
-***********************|TEST_ENVIRONMENT=true deno test --unstable --allow-all |***********************
-                        -------------------------------------------------------
+                       
+TEST_ENVIRONMENT=true deno test --unstable --allow-all 
+                        
