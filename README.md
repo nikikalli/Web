@@ -9,6 +9,10 @@
     
    The project is build with [DENO](https://deno.land/) backend framework.
    (Open the link for instractions on how to install and use deno)
+   
+   
+   Other technologies used in this project are: 
+   PostgreSQL, JS, bootstrap
 
 
 
