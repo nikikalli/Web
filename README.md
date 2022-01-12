@@ -1,7 +1,7 @@
                                                               
                                                               
                                                               
-                                                  Wed software development project
+                                                     Wed software development project
                                                               
 
    ![web](https://user-images.githubusercontent.com/64903981/149135888-cb4b52a6-6be5-4ae1-889a-50b23831e75c.png)
@@ -18,7 +18,7 @@
 
 
 
-                                                    Access and CREATE TABLEs
+                                                      Access and CREATE TABLEs
 
 
 CREATE TABLEs can be found in root folder of the application.                               
