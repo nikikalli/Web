@@ -36,7 +36,7 @@ The address at which the application can currently be accessed:
 
                                                 Guide on how to run the application
 
-                                                    Running from .env file
+                                                      Running from .env file
 
 
 
