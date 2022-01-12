@@ -8,7 +8,7 @@
 
     
    The project is build with [DENO](https://deno.land/) backend framework.
-   (Open the link for instraction on how to install deno)
+   (Open the link for instractions on how to install and use deno)
 
 
 
