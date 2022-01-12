@@ -34,9 +34,9 @@ The address at which the application can currently be accessed:
 
 
 
-                                                Guide on how to run the application
+                                                    Guide on how to run the application
 
-                                                      Running from .env file
+                                                         Running from .env file
 
 
 
@@ -48,7 +48,7 @@ The address at which the application can currently be accessed:
 
 
 
-                                                        How to run tests
+                                                            How to run tests
 
 
  To run tests you have to set TEST_ENVIRONMENT to something, for example to true. 
