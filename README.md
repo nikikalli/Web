@@ -18,7 +18,7 @@
 
 
 
-                                                      Access and CREATE TABLEs
+                                                        Access and CREATE TABLEs
 
 
 CREATE TABLEs can be found in root folder of the application.                               
